@@ -1,0 +1,29 @@
+# --- Python ---
+Digit/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- OS / Editor ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Data (do not commit the raw Kaggle CSVs) ---
+notebooks/data/
+*.csv
+!outputs/submission.csv
+
+# --- Large trained models (uncomment to exclude from git; keep locally / use Git LFS) ---
+# models/*.pth
+
+# --- Streamlit ---
+.streamlit/secrets.toml

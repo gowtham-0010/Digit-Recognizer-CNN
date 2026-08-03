@@ -1,0 +1,16 @@
+{
+  "baseline_random_forest": {
+    "model": "RandomForestClassifier",
+    "n_estimators": 100,
+    "random_state": 42,
+    "val_accuracy": 0.9611904761904762
+  },
+  "cnn_best_model": {
+    "val_accuracy": 0.9940476190476191,
+    "precision_weighted": 0.9940782657536956,
+    "recall_weighted": 0.9940476190476191,
+    "f1_weighted": 0.9940520292858676,
+    "best_val_acc_run1_no_aug": 0.9897619047619047,
+    "best_val_acc_run2_augmented": 0.9940476190476191
+  }
+}

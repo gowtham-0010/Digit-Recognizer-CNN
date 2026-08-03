@@ -1,0 +1,11 @@
+# --- App / inference dependencies (VS Code side) ---
+torch>=2.1
+Pillow>=10.0
+numpy>=1.24
+streamlit>=1.32
+streamlit-drawable-canvas>=0.9.3
+
+# --- Shared with Colab (kept in sync for local notebook exploration, optional) ---
+pandas>=2.0
+matplotlib>=3.7
+scikit-learn>=1.3
