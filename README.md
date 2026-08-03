@@ -8,9 +8,7 @@ model development/training in **Google Colab**, and an inference-only
 ![Demo screenshot](assets/demo_screenshot.png)
 ![Demo screenshot](assets/demo_screenshot_2.png)
 ![Demo screenshot](assets/demo_screenshot_3.png)
-
-
-
+![Demo screenshot](assets/demo_screenshot_4.png)
 
 ## 🎯 Project Objective
 
@@ -63,7 +61,7 @@ This project intentionally separates **training** from **application**:
 ```
 digit-recognizer-cnn/
 │
-├── notebooks/                          # Google Colab
+├── notebooks/                          
 │   ├── 01_EDA_and_Baseline.ipynb       # data load, EDA, RF baseline
 │   ├── 02_CNN_Training.ipynb           # SimpleCNN, augmentation, checkpointing, LR scheduler, early stopping
 │   └── 03_Evaluation_and_Export.ipynb  # confusion matrix, report, curves, submission.csv
@@ -148,10 +146,3 @@ here once deployed.
 Dataset: [Kaggle Digit Recognizer](https://www.kaggle.com/c/digit-recognizer) (MNIST-derived).
 
 ---
-
-
-**GitHub description (short):**
-> CNN-based handwritten digit recognizer (PyTorch, 99.4% val accuracy)
-> trained in Google Colab, served through a Streamlit app — with
-> checkpointing, LR scheduling, early stopping, and full evaluation
-> metrics.
