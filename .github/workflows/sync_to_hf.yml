@@ -12,9 +12,12 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          lfs: true  # Enable Git LFS checkout
 
-      - name: Push to Hugging Face Space
+      - name: Install Git LFS and push to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
+          git lfs install
+          git lfs track "*.pth" "*.h5" "*.keras" "*.pt"
           git push --force https://gowtham-0010:$HF_TOKEN@huggingface.co/spaces/gowtham-0010/Digit-Recognizer-CNN main
