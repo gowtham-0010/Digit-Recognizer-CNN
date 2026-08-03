@@ -10,14 +10,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          lfs: true  # Enable Git LFS checkout
 
-      - name: Install Git LFS and push to Hugging Face
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Hugging Face Hub
+        run: pip install huggingface_hub
+
+      - name: Sync repository to HF Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git lfs install
-          git lfs track "*.pth" "*.h5" "*.keras" "*.pt"
-          git push --force https://gowtham-0010:$HF_TOKEN@huggingface.co/spaces/gowtham-0010/Digit-Recognizer-CNN main
+          python -c "
+          from huggingface_hub import HfApi
+          api = HfApi()
+          api.upload_folder(
+              folder_path='.',
+              repo_id='gowtham-0010/Digit-Recognizer-CNN',
+              repo_type='space',
+              token='$HF_TOKEN'
+          )
+          "
