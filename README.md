@@ -9,6 +9,9 @@ model development/training in **Google Colab**, and an inference-only
 ![Demo screenshot](assets/demo_screenshot_2.png)
 ![Demo screenshot](assets/demo_screenshot_3.png)
 
+
+
+
 ## 🎯 Project Objective
 
 Classify a 28×28 grayscale handwritten digit image into one of 10 classes
